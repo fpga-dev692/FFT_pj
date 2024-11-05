@@ -20,7 +20,7 @@
 | Vivado | Verilog HDL | RTL Design, Simulation, Block Design |
 | Vitis | C | Test |
 
-*In addition, MATLAB was used for simple debugging and test*
+*In addition, MATLAB was used for simple debugging and testing*
 
 ## File Description
 **※ This project was developed in the Vivado and Vitis 2023.1 environments. If you wish to run it in a lower version, it is recommended to create a new project and add the .v files.**

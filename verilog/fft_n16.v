@@ -6,8 +6,8 @@ module fft_n16(
     input i_valid,
     input signed [`W-1:0] x0r, x1r, x2r, x3r, x4r, x5r, x6r, x7r, x8r, x9r, x10r, x11r, x12r, x13r, x14r, x15r,
                           x0i, x1i, x2i, x3i, x4i, x5i, x6i, x7i, x8i, x9i, x10i, x11i, x12i, x13i, x14i, x15i,
-    output reg signed [`W-1:0] X0r, X1r, X2r, X3r, X4r, X5r, X6r, X7r, X0i, X1i, X2i, X3i, X4i, X5i, X6i, X7i,
-                               X8r, X9r, X10r, X11r, X12r, X13r, X14r, X15r, X8i, X9i, X10i, X11i, X12i, X13i, X14i, X15i
+    output reg signed [`W-1:0] X0r, X1r, X2r, X3r, X4r, X5r, X6r, X7r, X8r, X9r, X10r, X11r, X12r, X13r, X14r, X15r,
+                               X0i, X1i, X2i, X3i, X4i, X5i, X6i, X7i, X8i, X9i, X10i, X11i, X12i, X13i, X14i, X15i
     );
     
     parameter N = 16;

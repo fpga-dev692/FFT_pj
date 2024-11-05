@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "defines.vh"
 `include "width.vh"
 
 module twiddle(
@@ -13,11 +14,22 @@ module twiddle(
     reg signed [`W:0] b_tmp1, w_tmp1;
     reg signed [`W-1:0] b_tmp2, w_tmp2;
     
-    always @(posedge clk) begin
-        p_tmp = b_tmp2 * w_tmp2;
-        q = mult(br,wr);
-        r = mult(bi,wi);
-    end
+    generate
+        if(`CLOCK_UP == `ON) begin
+            always @(posedge clk) begin
+                p_tmp = b_tmp2 * w_tmp2;
+                q = mult(br,wr);
+                r = mult(bi,wi);
+            end
+        end
+        else if(`CLOCK_UP == `OFF) begin
+            always @* begin
+                p_tmp = b_tmp2 * w_tmp2;
+                q = mult(br,wr);
+                r = mult(bi,wi);
+            end
+        end
+    endgenerate
     
     always @* begin
         b_tmp1 = br+bi;

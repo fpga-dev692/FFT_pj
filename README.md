@@ -1,6 +1,6 @@
 # FFT Project
 [Report Link](https://1drv.ms/b/s!AoW7lidA8JGFk0vTEJOxraDXmEUK?e=ZGnC8p)
-* Written in Korean
+※ Written in Korean
 
 ## Summary
 - **Radix-2 FFT**

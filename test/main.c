@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "xil_printf.h"
-// #include "xparameters.h"
+#include "xparameters.h"
 #include "fft.h"
 #include "math.h"
 #include "xil_io.h"
@@ -27,7 +27,7 @@ int main()
 
     /* DC signal */
 	for(i=0; i<SAMPLES; i++){
-		tmp[0][i] = 32767;	// 2^15 - 1
+		tmp[0][i] = AMPLITUDE;	// 2^15 - 1
 		tmp[1][i] = 0;
 	}
 	for(uint8_t i=0; i<SAMPLES; i++){
@@ -52,13 +52,18 @@ int main()
     /* random signal */
     for(i=0; i<SAMPLES; i++){
 		tmp[0][i] = 1000*i;
-		tmp[1][i] = SAMPLES*(i-1) - 1000*i;
+		tmp[1][i] = 7000 - 1000*i;
 	}
-	for(uint8_t i=0; i<SAMPLES*2; i++){
-		x[0] = tmp[0][i]; x[1] = tmp[1][i];;
+	for(uint8_t i=0; i<SAMPLES; i++){
+		x[0] = tmp[0][i]; x[1] = tmp[1][i];
 		InSignal(x);
 		OutSignal(X);
-		printf("%2d: %+d%+di %+d%+di\n", i%SAMPLES,x[0],x[1],X[0],X[1]);
+		printf("%2d: %+d%+di %+d%+di\n", i,x[0],x[1],X[0],X[1]);
+	}
+	for(uint8_t i=0; i<SAMPLES; i++){
+		InSignal(x);
+		OutSignal(X);
+		printf("%2d: %+d%+di\n", i,X[0],X[1]);
 	}
 
     return 0;

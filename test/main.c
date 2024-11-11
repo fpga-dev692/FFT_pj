@@ -7,7 +7,7 @@
 
 #define FFT_IP_BASEADDR 0x43C00000
 
-#define SAMPLES 16
+#define SAMPLES 8
 #define AMPLITUDE 32767
 
 void InSignal(int16_t x[]);
@@ -52,7 +52,7 @@ int main()
     /* random signal */
     for(i=0; i<SAMPLES; i++){
 		tmp[0][i] = 1000*i;
-		tmp[1][i] = 15000 - 1000*i;
+		tmp[1][i] = SAMPLES*(i-1) - 1000*i;
 	}
 	for(uint8_t i=0; i<SAMPLES*2; i++){
 		x[0] = tmp[0][i]; x[1] = tmp[1][i];;

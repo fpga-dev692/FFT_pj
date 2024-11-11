@@ -1,17 +1,15 @@
 # FFT Project
 
-[Report Link](https://1drv.ms/p/s!AoW7lidA8JGFk0gNQjbB8OLGPTDh?e=GAYsPc)
-
-**※ Please refer to the link above for more information. (written in Korean)**
-
 ## Summary
-- **2-radix FFT**
-- **16 point**
+- **Radix-2 FFT**
+- **8-point**
 - **16-bit input & output data width**
 - 16-bit twiddle factor precision
-- **Radix-2 Burst I/O (Processing 8 inputs at once)**
-- 100MHz Target Clock Frequency
 - Using Fixed Point Format
+- **Burst I/O**
+- DIF(decimation in frequency)
+- 100MHz Target Clock Frequency
+- 13 clock cycle Latency(130ns)
 
 ## Development Enviroment
 ※ Target Device: Zybo Z7-20
@@ -20,7 +18,7 @@
 | Vivado | Verilog HDL | RTL Design, Simulation, Block Design |
 | Vitis | C | Test |
 
-*In addition, MATLAB was used for simple debugging and test*
+*Additionlly, MATLAB was used for simple debugging and test*
 
 ## File Description
 **※ This project was developed in the Vivado and Vitis 2023.1 environments. If you wish to run it in a lower version, it is recommended to create a new project and add the .v files.**

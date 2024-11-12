@@ -18,7 +18,7 @@
 ※ Target Device: Zybo Z7-20
 | Tool | Language | Use |
 |------|----------|-----|
-| Vivado | Verilog HDL | RTL Design, Simulation, Block Design |
+| Vivado | Verilog | RTL Design, Simulation, Block Design |
 | Vitis | C | Test |
 
 *Additionlly, MATLAB was used for simple debugging and test*

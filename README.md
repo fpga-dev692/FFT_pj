@@ -1,7 +1,9 @@
 # FFT Project
-[Report Link](https://1drv.ms/b/s!AoW7lidA8JGFk0vTEJOxraDXmEUK?e=ZGnC8p)
+**※ For more details, please refer to Final report.pdf (written in Korean).**
 
-※ Written in Korean
+#### Disclaimer
+All source code in this repository is written for personal projects and portfolio purposes only.
+It does not reuse any proprietary or company-owned code, and there are no copyright or license issues.
 
 ## Summary
 - **Radix-2 FFT**

@@ -16,7 +16,7 @@ It does not reuse any proprietary or company-owned code, and there are no copyri
 | **Used skills**     | Fixed-point arithmetic, Pipelining |
 
 ## Development Enviroment
-※ Target Device: Zybo Z7-20
+※ Target Device for Debugging: Zybo Z7-20 (Zynq-7000 Development Board)
 | Tool | Language | Use |
 |------|----------|-----|
 | Vivado | Verilog | RTL Design, Simulation, Block Design |
